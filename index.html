@@ -1,1 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Franco Sebastian Flores Luis | Data & MarTech Specialist</title>
+    <style>
+        :root {
+            --bg-color: #ffffff;
+            --text-color: #1a1a1a;
+            --accent-color: #2c3e50;
+            --card-bg: #f8f9fa;
+            --border-color: #e2e8f0;
+        }
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg-color: #0f172a;
+                --text-color: #f8fafc;
+                --accent-color: #38bdf8;
+                --card-bg: #1e293b;
+                --border-color: #334155;
+            }
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        header {
+            text-align: center;
+            padding: 60px 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+        h1 { font-size: 2.5rem; margin: 0 0 10px 0; letter-spacing: -0.05em; }
+        .subtitle { font-size: 1.2rem; color: var(--accent-color); font-weight: bold; margin: 0 0 20px 0; }
+        .description { max-width: 600px; margin: 0 auto; font-size: 1.1rem; color: #64748b; }
+        
+        section { padding: 40px 0; border-bottom: 1px solid var(--border-color); }
+        h2 { font-size: 1.8rem; margin-top: 0; }
+        
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 25px;
+        }
+        .card {
+            background-color: var(--card-bg);
+            padding: 25px;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+        }
+        .card h3 { margin-top: 0; font-size: 1.3rem; }
+        
+        .btn {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: var(--bg-color);
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: bold;
+            font-size: 0.95rem;
+            margin-top: 15px;
+        }
+        .btn-secondary {
+            background-color: transparent;
+            border: 1px solid var(--text-color);
+            color: var(--text-color);
+            margin-left: 8px;
+        }
+        footer { text-align: center; padding: 40px 0; color: #64748b; font-size: 0.9rem; }
+    </style>
+</head>
+<body>
 
+    <div class="container">
+        <header>
+            <h1>FRANCO SEBASTIAN FLORES LUIS</h1>
+            <p class="subtitle">Data Analyst & MarTech Specialist / Analytics Engineer</p>
+            <p class="description">Transformando datos masivos y flujos multimedia en soluciones de negocio automatizadas con Inteligencia Artificial.</p>
+            <a href="#proyectos" class="btn">Ver Proyectos</a>
+            <a href="#contacto" class="btn btn-secondary">Contactar</a>
+        </header>
+
+        <section id="sobre-mi">
+            <h2>Sobre Mí</h2>
+            <p><strong>El puente entre los Datos, la Inteligencia Artificial y el Negocio</strong></p>
+            <p>Mi trayectoria une el rigor científico de la investigación académica con la experiencia práctica en estrategias digitales y e-commerce. Especializado en unir la estrategia comercial y el análisis de comportamiento con la ingeniería de datos mediante Python y SQL. No optimizo código por estética; diseño soluciones tecnológicas orientadas a optimizar procesos, descifrar algoritmos de plataformas y hacer crecer negocios.</p>
+        </section>
+
+        <section id="proyectos">
+            <h2>Proyectos Destacados</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>1. Auditor Inteligente de Medios</h3>
+                    <p>Pipeline multimodal en Python que extrae audio de TikTok/YouTube, transcribe de forma automatizada mediante Whisper y audita sesgos informativos o sentimientos utilizando modelos de lenguaje (LLMs). Construido con FastAPI y Docker.</p>
+                    <a href="#" class="btn">Demo en Vivo</a>
+                    <a href="#" class="btn btn-secondary">GitHub</a>
+                </div>
+                <div class="card">
+                    <h3>2. E-commerce Data Pipeline</h3>
+                    <p>Infraestructura automatizada de limpieza y procesamiento masivo de datos de ventas mediante SQL y Python. Diseñado para optimizar el inventario y maximizar el ROI en ventanas de alta conversión.</p>
+                    <a href="#" class="btn btn-secondary">GitHub</a>
+                </div>
+                <div class="card">
+                    <h3>3. Motor de Segmentación MarTech</h3>
+                    <p>Herramienta analítica de Machine Learning (Clustering K-Means) que clasifica carteras de clientes según patrones de consumo y automatiza estrategias de retención personalizadas mediante IA generativa.</p>
+                    <a href="#" class="btn">Demo en Vivo</a>
+                    <a href="#" class="btn btn-secondary">GitHub</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="pymes">
+            <h2>Soluciones de IA para PYMEs</h2>
+            <p>¿Tienes un negocio en crecimiento y quieres dar el salto a la automatización? Ayudo a PYMEs a integrar herramientas de Inteligencia Artificial para eliminar tareas manuales rutinarias, analizar de forma inteligente sus bases de datos de clientes y diseñar estrategias automatizadas que impulsen las ventas.</p>
+            <a href="#contacto" class="btn">Solicitar Consultoría</a>
+        </section>
+
+        <section id="contacto">
+            <h2>Contacto</h2>
+            <p>¿Buscas un perfil analítico para tu equipo o necesitas automatizar tu negocio? Hablemos.</p>
+            <p>Email: <a href="mailto:tu.email@email.com" style="color: var(--accent-color);">tu.email@email.com</a></p>
+            <p>
+                <a href="#" style="color: var(--accent-color); margin-right: 15px;">LinkedIn</a>
+                <a href="#" style="color: var(--accent-color);">GitHub</a>
+            </p>
+        </section>
+
+        <footer>
+            <p>&copy; 2026 Franco Sebastian Flores Luis. Todos los derechos reservados.</p>
+        </footer>
+    </div>
+
+</body>
+</html>
