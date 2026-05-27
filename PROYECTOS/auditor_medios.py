@@ -9,7 +9,7 @@ import google.generativeai as genai
 # CONFIGURACIÓN DE TU CLAVE DE GEMINI
 # ==========================================
 # REEMPLAZA las letras entre comillas con tu clave real de Gemini AI Studio
-# GEMINI_API_KEY = "AIzaSyCvBoaHPp8lqQYFUQmjoCXq6H0ce2dFDE8"
+# GEMINI_API_KEY = "COLOCA TU CLAVE API DE GEMINI AQUÍ"
 
 # genai.configure(api_key=GEMINI_API_KEY)
 
