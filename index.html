@@ -62,15 +62,28 @@
         }
         .nav-links a:hover { opacity: 1; }
         
+        /* Contenedor del Hero adaptado para 3 columnas (Foto + Título + Descripción) */
         .hero-content {
             display: grid;
-            grid-template-columns: 1.2fr 0.8fr;
-            gap: 40px;
+            grid-template-columns: auto 1fr 0.9fr;
+            gap: 45px;
             align-items: center;
             margin-top: 40px;
         }
+        
+        /* Estilo premium para tu foto de perfil calada */
+        .hero-avatar {
+            width: 150px;
+            height: 150px;
+            border-radius: 32px; /* Esquinas redondeadas suaves estilo app premium */
+            object-fit: cover;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+            background-color: var(--card-bg);
+        }
+
         .hero-left h2 { font-size: 1.1rem; font-weight: 500; opacity: 0.9; margin-bottom: 10px; }
-        .hero-left h1 { font-size: 3.8rem; font-weight: 800; line-height: 1.1; letter-spacing: -0.04em; }
+        .hero-left h1 { font-size: 3.5rem; font-weight: 800; line-height: 1.1; letter-spacing: -0.04em; }
         .hero-right p { font-size: 1.1rem; opacity: 0.85; line-height: 1.6; font-weight: 400; }
 
         .hero-pillars {
@@ -116,7 +129,6 @@
         .section-header h2 { font-size: 2rem; font-weight: 800; line-height: 1.2; margin-top: 8px; }
         .section-header p { color: var(--text-muted); font-size: 1.05rem; }
 
-        /* Grilla de Proyectos */
         .projects-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -137,7 +149,6 @@
             border-color: rgba(249, 87, 56, 0.3);
         }
 
-        /* Contenedor optimizado para las imágenes técnicas */
         .project-image-container {
             height: 50%;
             overflow: hidden;
@@ -199,7 +210,8 @@
         /* Responsivo Celular */
         @media (max-width: 900px) {
             .hero-section { padding: 20px; min-height: auto; }
-            .hero-content { grid-template-columns: 1fr; gap: 20px; }
+            .hero-content { grid-template-columns: 1fr; gap: 25px; text-align: center; }
+            .hero-avatar { margin: 0 auto; width: 130px; height: 130px; }
             .hero-left h1 { font-size: 2.5rem; }
             .hero-pillars { grid-template-columns: repeat(2, 1fr); gap: 15px; }
             .tech-bar { flex-wrap: wrap; gap: 15px; padding: 20px; }
@@ -223,10 +235,13 @@
         </nav>
 
         <div class="hero-content">
+            <img src="images/perfil.png" alt="Franco Flores" class="hero-avatar">
+
             <div class="hero-left">
                 <h2>Hey, soy Analista de Datos & MarTech</h2>
                 <h1>DIRECCIÓN ANALÍTICA.</h1>
             </div>
+            
             <div class="hero-right">
                 <p>Uniendo el rigor metodológico de la Universidad de Salamanca con la ingeniería de datos aplicada. Desarrollo soluciones automatizadas e infraestructuras inteligentes con IA para transformar operaciones comerciales.</p>
             </div>
