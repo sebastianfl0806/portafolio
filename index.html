@@ -14,7 +14,6 @@
             --card-bg: #12131c;
             --text-white: #ffffff;
             --text-muted: #94a3b8;
-            /* El degradado ardiente e intenso de tu imagen de referencia */
             --gradient-hero: linear-gradient(135deg, #f95738 0%, #9e1a1a 40%, #12131c 100%);
             --border-light: rgba(255, 255, 255, 0.05);
         }
@@ -33,7 +32,7 @@
             line-height: 1.5;
         }
 
-        /* --- SECCIÓN 1: HERO SECCIÓN GRADIENTE (CURVA) --- */
+        /* --- SECCIÓN 1: HERO SECCIÓN --- */
         .hero-section {
             background: var(--gradient-hero);
             min-height: 85vh;
@@ -45,7 +44,6 @@
             justify-content: space-between;
         }
 
-        /* Barra de Navegación */
         nav {
             display: flex;
             justify-content: space-between;
@@ -64,7 +62,6 @@
         }
         .nav-links a:hover { opacity: 1; }
         
-        /* Contenedor del Mensaje Principal */
         .hero-content {
             display: grid;
             grid-template-columns: 1.2fr 0.8fr;
@@ -76,7 +73,6 @@
         .hero-left h1 { font-size: 3.8rem; font-weight: 800; line-height: 1.1; letter-spacing: -0.04em; }
         .hero-right p { font-size: 1.1rem; opacity: 0.85; line-height: 1.6; font-weight: 400; }
 
-        /* Pilares Inferiores del Hero */
         .hero-pillars {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
@@ -120,7 +116,7 @@
         .section-header h2 { font-size: 2rem; font-weight: 800; line-height: 1.2; margin-top: 8px; }
         .section-header p { color: var(--text-muted); font-size: 1.05rem; }
 
-        /* Grilla de Proyectos Estilo Tarjetas Verticales */
+        /* Grilla de Proyectos */
         .projects-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -134,25 +130,30 @@
             transition: transform 0.3s ease, border-color 0.3s ease;
             display: flex;
             flex-direction: column;
-            height: 450px;
+            height: 480px;
         }
         .project-card:hover {
             transform: translateY(-6px);
             border-color: rgba(249, 87, 56, 0.3);
         }
-        /* Espacio para simular la imagen minimalista */
-        .project-image-placeholder {
+
+        /* Contenedor optimizado para las imágenes técnicas */
+        .project-image-container {
             height: 50%;
-            background: linear-gradient(180deg, #181926 0%, #12131c 100%);
+            overflow: hidden;
             border-bottom: 1px solid var(--border-light);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: rgba(255,255,255,0.1);
-            font-size: 0.8rem;
-            letter-spacing: 0.1em;
-            text-transform: uppercase;
+            background-color: #07080c;
         }
+        .project-image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        .project-card:hover .project-image-container img {
+            transform: scale(1.04);
+        }
+
         .project-info {
             padding: 25px;
             display: flex;
@@ -163,7 +164,7 @@
         .project-info h4 { font-size: 1.15rem; font-weight: 700; margin-bottom: 8px; }
         .project-info p { color: var(--text-muted); font-size: 0.85rem; line-height: 1.5; }
 
-        /* Botones Universales */
+        /* Botones */
         .btn {
             display: inline-block;
             padding: 10px 22px;
@@ -179,7 +180,7 @@
         .btn-outline { border: 1px solid rgba(255,255,255,0.2); color: var(--text-white); }
         .btn-outline:hover { background-color: rgba(255,255,255,0.05); }
 
-        /* --- SECCIÓN 4: BANNER CONSULTORÍA PYME --- */
+        /* --- SECCIÓN 4: BANNER CONSULTORÍA --- */
         .pyme-banner {
             background: linear-gradient(135deg, #12131c 0%, #1c1111 100%);
             border: 1px solid var(--border-light);
@@ -195,7 +196,7 @@
         .pyme-left h3 { color: #f95738; font-size: 0.85rem; text-transform: uppercase; margin-bottom: 10px; }
         .pyme-left h2 { font-size: 1.8rem; margin-bottom: 10px; }
 
-        /* Diseño Responsivo Celular */
+        /* Responsivo Celular */
         @media (max-width: 900px) {
             .hero-section { padding: 20px; min-height: auto; }
             .hero-content { grid-template-columns: 1fr; gap: 20px; }
@@ -204,6 +205,7 @@
             .tech-bar { flex-wrap: wrap; gap: 15px; padding: 20px; }
             .section-header { grid-template-columns: 1fr; gap: 15px; }
             .projects-grid { grid-template-columns: 1fr; }
+            .project-card { height: auto; min-height: 450px; }
             .pyme-banner { flex-direction: column; text-align: center; padding: 30px; }
         }
     </style>
@@ -259,18 +261,22 @@
 
         <div class="projects-grid">
             <div class="project-card">
-                <div class="project-image-placeholder">AI Pipeline Integration</div>
+                <div class="project-image-container">
+                    <img src="images/proyecto1.png" alt="Arquitectura del Auditor Inteligente de Medios">
+                </div>
                 <div class="project-info">
                     <div>
                         <h4>1. Auditor Inteligente de Medios</h4>
-                        <p>Pipeline multimodal en Python que extrae flujos de audio desde TikTok/YouTube, transcribe con Whisper y procesa auditorías automáticas de sesgos y emociones.</p>
+                        <p>Pipeline multimodal en Python que extrae flujos de audio desde TikTok/YouTube, transcribe con Whisper y procesa auditorías de sesgos mediante LLMs.</p>
                     </div>
                     <a href="#" class="btn btn-outline" style="margin-top: 15px; font-size: 0.75rem; width: fit-content;">Ver Repositorio</a>
                 </div>
             </div>
 
             <div class="project-card">
-                <div class="project-image-placeholder">SQL Architecture</div>
+                <div class="project-image-container">
+                    <img src="images/proyecto2.png" alt="Dashboard Analítico de Ventas E-commerce">
+                </div>
                 <div class="project-info">
                     <div>
                         <h4>2. E-commerce Data Pipeline</h4>
@@ -281,7 +287,9 @@
             </div>
 
             <div class="project-card">
-                <div class="project-image-placeholder">Machine Learning Model</div>
+                <div class="project-image-container">
+                    <img src="images/proyecto3.png" alt="Gráfico de Dispersión Clustering K-Means">
+                </div>
                 <div class="project-info">
                     <div>
                         <h4>3. Motor de Segmentación MarTech</h4>
